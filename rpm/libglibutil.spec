@@ -20,7 +20,7 @@ BuildRequires: pkgconfig(rpm)
 %{!?make_build: %define make_build make %{_smp_mflags}}
 
 # openSUSE workaround
-%if 0{suse_version} > 0
+%if 0%{?suse_version} > 0
 %define libname %{name}%{so_ver}
 %define so_ver %(echo %{version} | cut -d. -f1)
 %description
